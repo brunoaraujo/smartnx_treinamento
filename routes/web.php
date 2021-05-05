@@ -15,3 +15,7 @@ Route::group(['prefix' => 'categorias'], function(){
     Route::put('/edit/{id}', 'App\Http\Controllers\CategoriaController@putEdit')->name('app.categorias.edit');
     Route::get('/delete/{id}', 'App\Http\Controllers\CategoriaController@getDelete')->name('app.categorias.delete');
 });
+
+Route::group(['prefix' => 'livewire'], function(){
+    Route::get('/categorias', \App\Http\Livewire\CategoriaComponent::class)->name('liveiwire.categoria');
+});
